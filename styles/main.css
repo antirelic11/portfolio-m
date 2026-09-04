@@ -14,7 +14,7 @@ body {
     position: relative;
 }
 .grad {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -40,7 +40,6 @@ body {
     right: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
     text-align: left;
     display: flex;
     flex-direction: row;
@@ -68,6 +67,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 12px;
+    text-decoration: overline;
 }
 .portfolio-frame .github-link {
     margin-left: 0;

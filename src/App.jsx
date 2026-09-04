@@ -34,9 +34,9 @@ function App() {
           />
           View My Github Page
         </a>
-        <a href="/aboutme">About Me</a>
-        <a href="/projects">Projects</a>
-        <a href="/objectives">Objectives</a>
+        <a href="./aboutme">About Me</a>
+        <a href="./projects">Projects</a>
+        <a href="./objectives">Objectives</a>
         <button
           type="button"
           className="contact-button"

@@ -16,3 +16,9 @@
     font-weight: 500;
     font-style: normal;
 }
+@font-face {
+    font-family: "Handwritten";
+    src: url("../../fonts/Always In My Heart.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
