@@ -27,10 +27,12 @@ jobs:
 
       - name: Prepare static site
         run: |
-          mkdir _site
+          mkdir -p _site/aboutme
           cp index.html error.html _site/
+          cp error.html _site/404.html
           cp -r styles scripts _site/
           cp -r public/. _site/
+          cp public/pages/aboutme.html _site/aboutme/index.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
