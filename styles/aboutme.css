@@ -1,0 +1,87 @@
+@import url("./fonts/fonts.css");
+
+body {
+    background-color:rgb(7, 0, 55);
+    color: rgb(255, 255, 255);
+}
+
+.aboutme-title {
+    font-family: "Futura Cyrillic Bold", Arial, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: translate(-50%, -50%);
+    margin-top: 80px;
+    margin-bottom: 40px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+}
+.aboutme-section {
+    font-family: "Futura Cyrillic Light", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50vw;
+    margin-left: 5vw;
+    font-size: 1.5rem;
+}
+
+-- Portfolio Frame --
+
+.grad {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to bottom, rgba(4, 7, 50, 0), rgba(0, 0, 0, 0.868));
+}
+
+.portfolio-frame {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+}
+.portfolio-frame a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Futura Cyrillic Light", Arial, sans-serif;
+    font-size: larger;
+    padding: 0 10px;
+    margin-left: 10vw;
+    cursor: pointer;
+}
+.portfolio-frame .github-link,
+.portfolio-frame .aboutme-link,
+.portfolio-frame .projects-link,
+.portfolio-frame .objectives-link,
+.portfolio-frame .main-menu-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+.portfolio-frame .github-link {
+    margin-left: 0;
+}
+.github-icon,
+.aboutme-icon,
+.projects-icon,
+.objectives-icon,
+.main-menu-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Futura Cyrillic Medium";
+    src: url("../../fonts/FuturaCyrillicMedium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Futura Cyrillic Light";
+    src: url("../../fonts/FuturaCyrillicLight.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Futura Cyrillic Bold";
+    src: url("../../fonts/FuturaCyrillicBold.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}

@@ -1,0 +1,25 @@
+@import url('./fonts/fonts.css');
+
+body {
+    background-color: black;
+}
+div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+}
+h1 {
+    color: white;
+    font-family: "Futura Cyrillic Medium" , Arial, sans-serif;
+    text-align: center;
+}
+h2 {
+    color: white;
+    font-family: "Futura Cyrillic Light" , Arial, sans-serif;
+    text-align: center;
+}
