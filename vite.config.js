@@ -4,7 +4,7 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import { defineConfig } from 'vite'
 
-const cleanPages = ['aboutme', 'error',] // 'projects', 'objectives'] 
+const cleanPages = ['aboutme', 'projects', 'error',] // 'objectives'] 
 const cleanPagePattern = new RegExp(`^/(${cleanPages.join('|')})/?$`)
 const htmlPagePattern = new RegExp(`^/(${cleanPages.join('|')})\\.html$`)
 

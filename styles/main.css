@@ -13,6 +13,20 @@ body {
     overflow-x: hidden;
     position: relative;
 }
+.placeholder {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+.placeholder-img {
+    height:50px;
+    margin-top: 10px;
+}
+.placeholder-txt {
+    width:40%;
+}
 .grad {
     position: fixed;
     bottom: 0;
@@ -86,6 +100,8 @@ body {
     padding: 0 10px;
     margin-left: 10vw;
     cursor: pointer;
+    text-decoration: overline;
+
 }
 .github-icon,
 .aboutme-icon,
@@ -151,21 +167,34 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .page-title {
         left: 20px;
         right: 20px;
-        bottom: 110px;
+        bottom: 140px;
     }
 
     .portfolio-frame {
+        position: fixed;
+        top: 0;
+        bottom: auto;
         padding: 12px 14px;
+        justify-content: center;
+        max-height: 132px;
+        overflow-y: auto;
+        background: rgba(0, 0, 0, 0.9);
     }
 
     .portfolio-frame a,
     .contact-button,
     .github-button {
         font-size: 0.95rem;
+        margin-left: 0;
+    }
+
+    .portfolio-frame a,
+    .portfolio-frame .contact-button {
+        padding: 0 6px;
     }
 
     .github-form {
