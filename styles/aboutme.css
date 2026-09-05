@@ -3,8 +3,8 @@
 html {
     background-color: rgb(4, 0, 28);
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEk6LdUJeWlhQZL7LxjJL4KpajKuWoh4D-G1AgDhUl24I0CAY4bS9AIcKk&s=10");
-    overflow-x: hidden;
-    height: auto;
+    overflow: hidden;
+    height: 100%;
     overscroll-behavior: none;
 }
 
@@ -13,8 +13,8 @@ body {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEk6LdUJeWlhQZL7LxjJL4KpajKuWoh4D-G1AgDhUl24I0CAY4bS9AIcKk&s=10");
     color: rgb(255, 255, 255);
     min-height: 100svh;
-    height: auto;
-    overflow: visible;
+    height: 100%;
+    overflow: auto;
     overscroll-behavior: none;
 }
 
@@ -160,12 +160,12 @@ body {
 
 @media (max-width: 900px) {
     html {
-        height: auto;
+        height: 100%;
     }
 
     body {
         min-height: 100svh;
-        height: auto;
+        height: 100%;
         padding-bottom: 150px;
     }
 
