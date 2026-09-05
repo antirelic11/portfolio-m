@@ -2,32 +2,41 @@ const contactButton = document.querySelector(".contact-button");
 const contactPopup = document.getElementById("contact-popup");
 const closeButton = document.querySelector(".close-button");
 
+function setContactPopupState(isOpen) {
+    if (!contactPopup) {
+        return;
+    }
+
+    contactPopup.classList.toggle("active", isOpen);
+    contactPopup.setAttribute("aria-hidden", String(!isOpen));
+}
+
+setContactPopupState(false);
+
 if (contactButton) {
     contactButton.setAttribute("href", "#");
     contactButton.addEventListener("click", function (event) {
         event.preventDefault();
-        if (contactPopup) {
-            contactPopup.classList.add("active");
-        }
+        setContactPopupState(true);
     });
 }
 
 if (closeButton && contactPopup) {
     closeButton.addEventListener("click", function () {
-        contactPopup.classList.remove("active");
+        setContactPopupState(false);
     });
 }
 
 if (contactPopup) {
     contactPopup.addEventListener("click", function (event) {
         if (event.target === contactPopup) {
-            contactPopup.classList.remove("active");
+            setContactPopupState(false);
         }
     });
 
     document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
-            contactPopup.classList.remove("active");
+            setContactPopupState(false);
         }
     });
 }

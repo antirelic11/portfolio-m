@@ -116,15 +116,21 @@ body {
 .contact-popup {
     position: fixed;
     inset: 0;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.55);
     z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 220ms ease, visibility 220ms ease;
 }
 
 .contact-popup.active {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .contact-popup-frame {
@@ -137,6 +143,14 @@ body {
     padding: 28px 24px 20px;
     color: rgb(255, 255, 255);
     font-family: "Futura Cyrillic Light", Arial, sans-serif;
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.contact-popup.active .contact-popup-frame {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .contact-popup-frame h2 {
@@ -199,6 +213,49 @@ body {
 
     .github-form {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow: hidden;
+    }
+
+    .placeholder {
+        display: none;
+    }
+
+    .page-title {
+        bottom: 120px;
+        font-size: clamp(2rem, 10vw, 2.5rem);
+    }
+
+    .portfolio-frame {
+        display: flex;
+        gap: 10px 12px;
+        max-height: none;
+        padding: 10px 12px;
+        overflow: visible;
+    }
+
+    .portfolio-frame a,
+    .portfolio-frame .contact-button {
+        justify-content: center;
+        gap: 8px;
+        padding: 0 6px;
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: normal;
+    }
+
+    .github-icon,
+    .aboutme-icon,
+    .projects-icon,
+    .objectives-icon,
+    .contact-icon {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 auto;
     }
 }
 

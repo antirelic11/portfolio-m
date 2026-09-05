@@ -1,16 +1,21 @@
 @import url("./fonts/fonts.css");
 
 html {
+    background-color: rgb(4, 0, 28);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEk6LdUJeWlhQZL7LxjJL4KpajKuWoh4D-G1AgDhUl24I0CAY4bS9AIcKk&s=10");
     overflow-x: hidden;
-    height: 100%;
+    height: auto;
+    overscroll-behavior: none;
 }
 
 body {
     background-color:rgb(4, 0, 28);
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEk6LdUJeWlhQZL7LxjJL4KpajKuWoh4D-G1AgDhUl24I0CAY4bS9AIcKk&s=10");
     color: rgb(255, 255, 255);
-    height: 100%;
-    overflow: auto;
+    min-height: 100svh;
+    height: auto;
+    overflow: visible;
+    overscroll-behavior: none;
 }
 
 
