@@ -3,14 +3,18 @@
 html {
     background-color: rgb(4, 0, 28);
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEk6LdUJeWlhQZL7LxjJL4KpajKuWoh4D-G1AgDhUl24I0CAY4bS9AIcKk&s=10");
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
     height: 100%;
     overscroll-behavior: none;
 }
 
 body {
-    background-color:rgb(4, 0, 28);
+    background-color: rgb(4, 0, 28);
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEk6LdUJeWlhQZL7LxjJL4KpajKuWoh4D-G1AgDhUl24I0CAY4bS9AIcKk&s=10");
+    background-size: cover;
+    background-position: center;
     color: rgb(255, 255, 255);
     min-height: 100svh;
     height: 100%;
@@ -18,32 +22,48 @@ body {
     overscroll-behavior: none;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(4, 0, 28, 0.15), rgba(4, 0, 28, 0.7));
+}
+
+.aboutme-shell {
+    position: relative;
+    z-index: 1;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 32px 5vw 150px;
+}
 
 .aboutme-title {
     position: relative;
     z-index: 1;
     font-family: "Futura Cyrillic Bold", Arial, sans-serif;
-    font-size: 5rem;
-    text-align: center;
+    font-size: clamp(3rem, 4vw, 5rem);
+    text-align: left;
     color: rgb(51, 111, 190);
-    margin-top: 80px;
-    margin-bottom: 40px;
-    width:30vw;
-    margin-left: 5%;
-    margin-right: auto;
+    width: min(32rem, 48vw);
+    margin: 0 0 20px 0;
     background-color: rgb(39, 31, 126);
     text-decoration: overline;
+    padding: 18px 22px;
+    border: 1px solid rgba(126, 207, 255, 0.24);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
 }
+
 .aboutme-line {
     position: relative;
-    width: 90vw;
+    width: min(90vw, 1400px);
     height: 8px;
     background-color: rgba(0, 87, 200, 0.522);
-    margin-left: 5%;
-    margin-right: auto;
-    margin-bottom: 40px;
-    z-index:999;
+    margin: 0 0 28px 0;
+    z-index: 1;
 }
+
 .grad2 {
     position: fixed;
     bottom: 0;
@@ -51,7 +71,6 @@ body {
     width: 50%;
     height: 100vh;
     background: linear-gradient(to left, rgba(92, 103, 255, 0.311), rgba(0, 0, 0, 0));
-    align-self: right;
     margin-left: 50%;
     z-index: 0;
     pointer-events: none;
@@ -61,41 +80,45 @@ body {
     position: relative;
     z-index: 1;
     font-family: "Futura Cyrillic Medium", Arial, sans-serif;
-    font-size: 3.5rem;
+    font-size: clamp(2.2rem, 2.8vw, 3.5rem);
     text-align: center;
     color: rgb(51, 111, 190);
-    margin-top: 20px;
-    margin-bottom: 40px;
-    width:30vw;
-    margin-left: 11%;
-    margin-right: auto;
+    width: min(24rem, 100%);
+    margin: 0 auto 28px;
     text-decoration: underline;
 }
+
 .aboutme-section1 {
     position: relative;
     z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(260px, 1.05fr) minmax(260px, 1.4fr);
+    align-items: center;
+    gap: 3vw;
+    max-width: 1300px;
+    margin: 0 auto;
     font-family: "Futura Cyrillic Medium", Arial, sans-serif;
-    display: flex;
-    flex-direction: row;
-    margin-right: 50vw;
-    margin-left: 5vw;
-    font-size: 1.9rem;
+    font-size: clamp(1.2rem, 1.9vw, 1.9rem);
 }
+
 .aboutme-text1 {
-    color:rgb(142, 144, 255);
-    background-color: rgba(0, 0, 3, 0.445);
+    color: rgb(142, 144, 255);
+    background-color: rgba(0, 0, 3, 0.715);
+    padding: 22px 20px;
+    border-left: 3px solid rgba(126, 207, 255, 0.7);
+    border-right: 3px solid rgba(126, 207, 255, 0.18);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
 }
 
 .aboutme-image1 {
-    position:absolute;
-    width: 600px;
-    height: 600px;
-    margin-left: 50vw;
-    align-self: center; 
+    position: relative;
+    width: min(100%, 760px);
+    max-width: 760px;
+    height: auto;
+    justify-self: end;
+    margin-bottom: -42px;
     z-index: 1;
 }
-
-/* Portfolio Frame */
 
 .grad {
     position: fixed;
@@ -118,23 +141,48 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px 12px;
     padding: 10px 16px;
     box-sizing: border-box;
-    z-index:999;
+    z-index: 10;
+    background: linear-gradient(90deg, rgba(5, 10, 34, 0.86), rgba(5, 10, 34, 0.62));
+    border-top: 1px solid rgba(151, 211, 255, 0.28);
+    box-shadow: 0 -12px 35px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(12px);
+    pointer-events: auto;
 }
+
 .portfolio-frame a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     color: rgb(255, 255, 255);
-    text-decoration: none;
+    text-decoration: overline;
     font-family: "Futura Cyrillic Light", Arial, sans-serif;
     font-size: larger;
     padding: 0 10px;
-    margin-left: 10vw;
+    margin-left: 0;
     cursor: pointer;
+    transition: color 180ms ease, opacity 180ms ease;
 }
+
+.portfolio-frame a:hover,
+.portfolio-frame a:focus-visible {
+    color: rgb(126, 207, 255);
+    opacity: 1;
+}
+
+.portfolio-frame a img {
+    transition: opacity 180ms ease;
+}
+
+.portfolio-frame a:hover img,
+.portfolio-frame a:focus-visible img {
+    opacity: 0.9;
+}
+
 .portfolio-frame .github-link,
 .portfolio-frame .aboutme-link,
 .portfolio-frame .projects-link,
@@ -145,9 +193,11 @@ body {
     gap: 12px;
     text-decoration: overline;
 }
+
 .portfolio-frame .github-link {
     margin-left: 0;
 }
+
 .github-icon,
 .aboutme-icon,
 .projects-icon,
@@ -156,6 +206,7 @@ body {
     width: 40px;
     height: 40px;
     display: block;
+    object-fit: contain;
 }
 
 @media (max-width: 900px) {
@@ -169,9 +220,13 @@ body {
         padding-bottom: 150px;
     }
 
+    .aboutme-shell {
+        padding: 24px 5vw 170px;
+    }
+
     .aboutme-title {
         width: auto;
-        margin: 40px 5% 24px;
+        margin: 0 0 18px;
         font-size: clamp(2.5rem, 10vw, 5rem);
     }
 
@@ -182,14 +237,14 @@ body {
 
     .aboutme-subtitle {
         width: auto;
-        margin: 20px 5% 24px;
+        margin: 0 auto 24px;
         font-size: clamp(2rem, 8vw, 3.5rem);
     }
 
     .aboutme-section1 {
-        flex-direction: column;
-        margin: 0 5%;
-        font-size: clamp(1.2rem, 3.5vw, 1.9rem);
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 0;
     }
 
     .aboutme-text1 {
@@ -197,10 +252,9 @@ body {
     }
 
     .aboutme-image1 {
-        position: relative;
-        width: min(600px, 100%);
-        height: auto;
-        margin: 24px auto 0;
+        width: min(100%, 600px);
+        justify-self: center;
+        margin: 0 auto;
     }
 
     .portfolio-frame {
@@ -240,8 +294,9 @@ body {
 
 @media (min-width: 901px) and (max-height: 1000px) {
     .aboutme-image1 {
-        width: min(600px, 55vh);
-        height: auto;
+        width: min(100%, 760px);
+        max-width: 760px;
     }
 }
+
 

@@ -1,0 +1,174 @@
+@import url("./fonts/fonts.css");
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    color: rgb(255, 255, 255);
+    background: rgb(5, 10, 34) url("./resources/pexels-photo-3222255.jpg") center / cover fixed;
+    font-family: "Futura Cyrillic Light", Arial, sans-serif;
+    overflow-x: hidden;
+}
+.grad {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to bottom, rgba(4, 7, 50, 0), rgba(0, 0, 0, 0.868));
+    pointer-events: none;
+}
+
+.projects-content {
+    position: relative;
+    z-index: 1;
+    width: min(720px, calc(100% - 48px));
+    min-height: 100svh;
+    margin: 0 auto;
+    padding: 18vh 0 160px;
+}
+
+.projects-kicker {
+    margin: 0 0 12px;
+    color: rgb(126, 207, 255);
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+}
+
+.projects-content h1 {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-family: "Futura Cyrillic Bold", Arial, sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+.projects-copy {
+    max-width: 34rem;
+    margin: 28px 0;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    line-height: 1.5;
+}
+
+.projects-return {
+    display: inline-block;
+    padding: 10px 16px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(151, 211, 255, 0.35);
+    border-radius: 999px;
+    background: rgba(5, 10, 34, 0.62);
+    text-decoration: none;
+    transition: color 220ms ease-in-out, background-color 220ms ease-in-out, border-color 220ms ease-in-out, box-shadow 220ms ease-in-out, opacity 220ms ease-in-out;
+}
+
+.projects-return:hover,
+.projects-return:focus-visible {
+    background: rgba(53, 115, 157, 0.55);
+    border-color: rgba(126, 207, 255, 0.65);
+    box-shadow: 0 10px 18px rgba(126, 207, 255, 0.14);
+}
+
+.portfolio-frame {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(5, 10, 34, 0.86), rgba(5, 10, 34, 0.62));
+    border-top: 1px solid rgba(151, 211, 255, 0.28);
+    backdrop-filter: blur(12px);
+    z-index: 10;
+    pointer-events: auto;
+}
+.portfolio-frame a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Futura Cyrillic Light", Arial, sans-serif;
+    font-size: larger;
+    padding: 0 10px;
+    margin-left: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    gap: 12px;
+    text-decoration: overline;
+    transition: color 220ms ease-in-out, background-color 220ms ease-in-out, border-color 220ms ease-in-out, box-shadow 220ms ease-in-out, opacity 220ms ease-in-out;
+}
+
+.portfolio-frame a:hover,
+.portfolio-frame a:focus-visible {
+    color: rgb(126, 207, 255);
+}
+
+.portfolio-frame .github-link {
+    margin-left: 0;
+}
+.github-icon,
+.aboutme-icon,
+.projects-icon,
+.objectives-icon,
+.main-menu-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .projects-content {
+        width: min(720px, calc(100% - 32px));
+        padding-top: 150px;
+    }
+
+    .portfolio-frame {
+        top: 0;
+        bottom: auto;
+        padding: 10px 12px;
+        justify-content: center;
+        max-height: 140px;
+        overflow-y: auto;
+    }
+
+    .portfolio-frame a {
+        margin-left: 0;
+        padding: 0 6px;
+        font-size: 0.95rem;
+    }
+
+    .portfolio-frame .github-link,
+    .portfolio-frame .aboutme-link,
+    .portfolio-frame .projects-link,
+    .portfolio-frame .objectives-link,
+    .portfolio-frame .main-menu-link {
+        gap: 8px;
+    }
+
+    .github-icon,
+    .aboutme-icon,
+    .projects-icon,
+    .objectives-icon,
+    .main-menu-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
