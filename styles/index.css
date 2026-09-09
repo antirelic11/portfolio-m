@@ -105,7 +105,7 @@ body {
 
 .portfolio-frame {
     position: fixed;
-    left: 20px;
+    left: auto;
     right: auto;
     bottom: 0;
     width: 100%;
@@ -274,13 +274,24 @@ body {
 }
 
 @media (max-width: 900px) {
+    .grid {
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        margin-top:90vh; 
+        margin-bottom: auto;
+    }
     .page-title {
+        position:relative;
         left: 20px;
         right: 20px;
-        bottom: 13vh;
+        bottom: calc(3vh + 120px);
     }
-
-
+    .placeholder {
+        position: relative;
+        margin-top:0;
+        bottom: calc(2vh + 25px);
+    }
     .portfolio-frame {
         position: fixed;
         top: 0;
@@ -295,11 +306,6 @@ body {
         top: 0;
         bottom: auto;
         background: linear-gradient(to top, rgba(4, 7, 50, 0), rgba(0, 0, 0, 0.868));
-    }
-    .placeholder {
-        position: absolute;
-        margin-top:90vh;
-        margin-bottom: auto;
     }
 
     .portfolio-frame a,
