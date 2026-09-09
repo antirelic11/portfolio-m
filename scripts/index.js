@@ -1,6 +1,7 @@
 const contactButton = document.querySelector(".contact-button");
 const contactPopup = document.getElementById("contact-popup");
 const closeButton = document.querySelector(".close-button");
+document.querySelector(".page-title")?.classList.add("is-visible");
 
 function setContactPopupState(isOpen) {
     if (!contactPopup) {
