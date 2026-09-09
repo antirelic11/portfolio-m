@@ -1,13 +1,6 @@
 const contactButton = document.querySelector(".contact-button");
 const contactPopup = document.getElementById("contact-popup");
 const closeButton = document.querySelector(".close-button");
-const pageTitle = document.querySelector(".page-title");
-
-if (pageTitle) {
-    requestAnimationFrame(function () {
-        pageTitle.classList.add("is-visible");
-    });
-}
 
 function setContactPopupState(isOpen) {
     if (!contactPopup) {
