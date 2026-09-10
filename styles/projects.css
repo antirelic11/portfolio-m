@@ -15,6 +15,7 @@ body {
     background: rgb(5, 10, 34) url("./resources/pexels-photo-3222255.jpg") center / cover fixed;
     font-family: "Futura Cyrillic Light", Arial, sans-serif;
     overflow-x: hidden;
+    overflow-y:scroll;
 }
 .grad {
     position: fixed;
