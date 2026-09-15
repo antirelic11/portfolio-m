@@ -18,8 +18,7 @@ html {
     background-image: url('https://wallpapercave.com/wp/wp12688547.jpg');
     background-size: cover;
     background-position: center;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100vh;
     overscroll-behavior: none;
 }
 
@@ -30,10 +29,6 @@ body {
     background-position: center;
     margin: 0;
     min-height: 100vh;
-    height: 100%;
-    overflow: hidden;
-    overscroll-behavior: none;
-    position: relative;
 }
 .placeholder {
     position: absolute;
@@ -87,6 +82,10 @@ body {
     animation: title-reveal 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.nav-title {
+    display: none;
+}
+
 .grad {
     position: fixed;
     bottom: 0;
@@ -126,7 +125,7 @@ body {
     z-index: 10;
     box-sizing: border-box;
 }
-.portfolio-frame > * {
+.portfolio-frame > :not(.nav-title) {
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -277,6 +276,30 @@ body {
     cursor: pointer;
 }
 
+@media (min-width: 901px) {
+    .page-title {
+        display: none;
+    }
+
+    .nav-title {
+        display: block;
+        flex: 0 0 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: var(--ink);
+        font-family: "Futura Cyrillic Medium", Arial, sans-serif;
+        font-size: clamp(2rem, 4vw, 4rem);
+        font-weight: 500;
+        line-height: 1.1;
+        text-align: left;
+        text-decoration: none;
+        text-shadow: 0 3px 18px rgba(0, 0, 0, 0.55);
+        white-space: nowrap;
+        cursor: default;
+    }
+}
+
 @media (max-width: 900px) {
     :root {
         --nav-max: 30vh;
@@ -292,8 +315,6 @@ body {
         width: 100%;
         height: auto;
         max-height: var(--nav-max);
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -305,7 +326,7 @@ body {
         backdrop-filter: blur(10px);
     }
 
-    .portfolio-frame > * {
+    .portfolio-frame > :not(.nav-title) {
         flex: 0 0 auto;
         margin: 0;
         padding: 6px;
