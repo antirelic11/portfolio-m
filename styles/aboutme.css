@@ -3,8 +3,7 @@
 html {
     background-color: rgb(4, 0, 28);
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEk6LdUJeWlhQZL7LxjJL4KpajKuWoh4D-G1AgDhUl24I0CAY4bS9AIcKk&s=10");
-    overflow-x: hidden;
-    height:100%;
+    min-height: 100vh;
     overscroll-behavior: none;
 }
 
@@ -12,8 +11,8 @@ body {
     background-color: rgb(4, 0, 28);
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEk6LdUJeWlhQZL7LxjJL4KpajKuWoh4D-G1AgDhUl24I0CAY4bS9AIcKk&s=10");
     color: rgb(255, 255, 255);
-    min-height: 100svh;
-    overflow-y: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
     overscroll-behavior: none;
 }
 
